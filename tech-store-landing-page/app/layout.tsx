@@ -15,11 +15,20 @@ const manrope = Manrope({
   display: 'swap',
 })
 
+// En Netlify, `URL` es la URL del sitio en tiempo de build. Necesario para que
+// la og:image se resuelva absoluta (previsualización al compartir por WhatsApp).
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.URL ?? 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  title: 'TechStore | Tecnología que te conecta',
+  metadataBase: new URL(siteUrl),
+  title: 'Importados Tafí | Tecnología que te conecta',
   description:
-    'Accesorios, gadgets y productos tecnológicos al mejor precio. Cámaras, aros de luz, auriculares, cargadores y más. Consultá y comprá por WhatsApp con envíos a todo el país.',
+    'Accesorios, gadgets y productos tecnológicos importados al mejor precio. Cámaras, aros de luz, auriculares, cargadores y más. Consultá y comprá por WhatsApp con envíos a todo el país.',
+  applicationName: 'Importados Tafí',
   keywords: [
+    'importados',
+    'Tafí',
     'tecnología',
     'accesorios',
     'gadgets',
@@ -32,17 +41,33 @@ export const metadata: Metadata = {
   ],
   generator: 'v0.app',
   openGraph: {
-    title: 'TechStore | Tecnología que te conecta',
+    title: 'Importados Tafí | Tecnología que te conecta',
     description:
-      'Accesorios y gadgets tecnológicos al mejor precio. Consultá por WhatsApp.',
+      'Accesorios y gadgets tecnológicos importados al mejor precio. Consultá por WhatsApp.',
+    siteName: 'Importados Tafí',
     type: 'website',
     locale: 'es_AR',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Importados Tafí',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Importados Tafí | Tecnología que te conecta',
+    description:
+      'Accesorios y gadgets tecnológicos importados al mejor precio. Consultá por WhatsApp.',
+    images: ['/og-image.png'],
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f0f0f',
-  colorScheme: 'light',
+  themeColor: '#0a0a0a',
+  colorScheme: 'dark',
 }
 
 export default function RootLayout({

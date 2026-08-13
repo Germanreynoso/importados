@@ -40,9 +40,9 @@ export function Categories() {
           <Reveal key={id} delay={i * 0.05}>
             <a
               href="#productos"
-              className="group flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-black/5"
+              className="group hover:shadow-glow flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary"
             >
-              <span className="flex size-16 items-center justify-center rounded-2xl bg-secondary text-foreground transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+              <span className="flex size-16 items-center justify-center rounded-2xl bg-surface-2 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                 <Icon className="size-7" />
               </span>
               <span className="text-sm font-semibold leading-tight">{label}</span>

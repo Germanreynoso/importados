@@ -45,8 +45,8 @@ export function ProductCatalog() {
             className={cn(
               'rounded-full border px-4 py-2 text-sm font-medium transition-colors',
               active === f.id
-                ? 'border-foreground bg-foreground text-background'
-                : 'border-border bg-card text-foreground hover:border-foreground/40',
+                ? 'border-primary bg-primary text-primary-foreground'
+                : 'border-border bg-card text-foreground/80 hover:border-primary hover:text-primary',
             )}
           >
             {f.label}
