@@ -5,3 +5,7 @@ node_modules/
 *.tsbuildinfo
 .env*.local
 .DS_Store
+
+# Exports de Telegram: conversación privada con el proveedor. Las fotos que se
+# usan ya están en public/products, así que el export no hace falta en el repo.
+ChatExport_*/

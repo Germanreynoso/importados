@@ -2,12 +2,12 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowRight, BadgeCheck, Truck, Users } from 'lucide-react'
+import { ArrowRight, BadgeCheck, MapPin, Truck, Users } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/icons'
 import { whatsappLink } from '@/lib/products'
 
 const badges = [
-  { icon: Truck, label: 'Envíos a todo el país' },
+  { icon: Truck, label: 'Envíos a toda la provincia' },
   { icon: BadgeCheck, label: 'Productos de calidad' },
   { icon: Users, label: 'Atención personalizada' },
 ]
@@ -23,14 +23,16 @@ export function Hero() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-surface px-3 py-1.5 text-xs font-semibold uppercase tracking-widest">
-            Importados Tafí
+            <MapPin className="size-3.5 text-primary" />
+            Tafí del Valle, Tucumán
           </span>
           <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
             Tecnología que <span className="text-primary">te conecta</span>
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Encontrá accesorios, gadgets y productos tecnológicos al mejor
-            precio. Calidad, variedad y atención personalizada.
+            Tu local de tecnología y accesorios importados en Tafí del Valle.
+            Cargadores, cámaras de seguridad, aros de luz, auriculares y mucho
+            más, con envíos a toda la provincia de Tucumán.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

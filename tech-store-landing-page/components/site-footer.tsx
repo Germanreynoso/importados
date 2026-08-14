@@ -7,6 +7,7 @@ import {
   WhatsAppIcon,
 } from '@/components/icons'
 import { whatsappLink } from '@/lib/products'
+import { hasPublicAddress, site } from '@/lib/site'
 
 const nav = [
   { label: 'Inicio', href: '#inicio' },
@@ -33,8 +34,8 @@ export function SiteFooter() {
             className="size-28"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-foreground/60">
-            Los mejores gadgets y accesorios tecnológicos al mejor precio.
-            Calidad, confianza y atención personalizada.
+            Local de tecnología y accesorios importados en Tafí del Valle,
+            Tucumán. Envíos a toda la provincia y retiro por el local.
           </p>
           <div className="mt-5 flex items-center gap-3">
             <a href="#" aria-label="Instagram" className="flex size-9 items-center justify-center rounded-full border border-border bg-surface transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground">
@@ -92,16 +93,27 @@ export function SiteFooter() {
                 className="flex items-center gap-2.5 text-sm text-foreground/60 transition-colors hover:text-primary"
               >
                 <WhatsAppIcon className="size-4 text-primary" />
-                +54 9 381 358 6755
+                {site.phoneDisplay}
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm text-foreground/60">
               <Phone className="size-4 text-primary" />
               Lun a Sáb, 9 a 20 hs
             </li>
-            <li className="flex items-center gap-2.5 text-sm text-foreground/60">
-              <MapPin className="size-4 text-primary" />
-              Argentina
+            {/* Dirección postal: NAP. Debe coincidir con la ficha de Google. */}
+            <li className="flex items-start gap-2.5 text-sm text-foreground/60">
+              <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+              <address className="not-italic">
+                {hasPublicAddress && (
+                  <>
+                    {site.address.street}
+                    <br />
+                  </>
+                )}
+                {site.address.locality}, {site.address.region}
+                <br />
+                Argentina
+              </address>
             </li>
           </ul>
         </div>

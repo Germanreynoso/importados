@@ -1,12 +1,16 @@
 import {
+  Baby,
   Cable,
   Camera,
+  ChefHat,
   Cpu,
+  HeartPulse,
   Headphones,
   House,
   Lightbulb,
   Smartphone,
   TabletSmartphone,
+  Wrench,
 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import type { CategoryId } from '@/lib/products'
@@ -18,8 +22,12 @@ const categories: { id: CategoryId; label: string; icon: typeof Cable }[] = [
   { id: 'iluminacion', label: 'Iluminación', icon: Lightbulb },
   { id: 'accesorios', label: 'Accesorios para Celular', icon: Smartphone },
   { id: 'gadgets', label: 'Gadgets', icon: Cpu },
-  { id: 'hogar', label: 'Hogar Inteligente', icon: House },
+  { id: 'hogar', label: 'Hogar', icon: House },
   { id: 'soportes', label: 'Trípodes y Soportes', icon: TabletSmartphone },
+  { id: 'bazar', label: 'Bazar y Cocina', icon: ChefHat },
+  { id: 'juguetes', label: 'Juguetería', icon: Baby },
+  { id: 'salud', label: 'Salud y Cuidado', icon: HeartPulse },
+  { id: 'herramientas', label: 'Herramientas', icon: Wrench },
 ]
 
 export function Categories() {

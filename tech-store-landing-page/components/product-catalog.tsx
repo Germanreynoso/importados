@@ -1,14 +1,18 @@
 'use client'
 
 import {
+  Baby,
   Cable,
   Camera,
+  ChefHat,
   Cpu,
+  HeartPulse,
   Headphones,
   House,
   Lightbulb,
   Smartphone,
   TabletSmartphone,
+  Wrench,
 } from 'lucide-react'
 import { CategoryCarousel } from '@/components/category-carousel'
 import { ProductCard } from '@/components/product-card'
@@ -27,7 +31,11 @@ const categoryMeta: {
   { id: 'accesorios', label: 'Accesorios para Celular', icon: Smartphone },
   { id: 'soportes', label: 'Tripodes y Soportes', icon: TabletSmartphone },
   { id: 'gadgets', label: 'Gadgets', icon: Cpu },
+  { id: 'herramientas', label: 'Herramientas', icon: Wrench },
+  { id: 'bazar', label: 'Bazar y Cocina', icon: ChefHat },
   { id: 'hogar', label: 'Hogar', icon: House },
+  { id: 'juguetes', label: 'Juguetería', icon: Baby },
+  { id: 'salud', label: 'Salud y Cuidado Personal', icon: HeartPulse },
 ]
 
 const grouped = categoryMeta.map((cat) => ({

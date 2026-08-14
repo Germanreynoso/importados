@@ -30,6 +30,10 @@ export type CategoryId =
   | 'gadgets'
   | 'hogar'
   | 'soportes'
+  | 'bazar'
+  | 'juguetes'
+  | 'salud'
+  | 'herramientas'
 
 export type Product = {
   id: string
@@ -109,7 +113,7 @@ export const products: Product[] = [
   {
     id: 'auriculares-tomate',
     name: 'Auriculares Tomate',
-    price: 30000,
+    price: 35000,
     category: 'audio',
     image: '/products/auriculares-tomate.jpeg',
     featured: true,
@@ -426,8 +430,8 @@ export const products: Product[] = [
   },
   {
     id: 'mini-batidora',
-    name: 'Mini Batidora Portátil Alto Rendimiento',
-    price: null,
+    name: 'Mini Batidora Portátil Lelong',
+    price: 45000,
     category: 'hogar',
     image: '/products/mini-batidora.jpeg',
   },
@@ -444,6 +448,459 @@ export const products: Product[] = [
     price: null,
     category: 'hogar',
     image: '/products/banco-plegable.jpeg',
+  },
+
+  // ══ Incorporación agosto 2026 ══════════════════════════════════════════
+
+  // ── Audio ──────────────────────────────────────────────────────────────
+  {
+    id: 'auriculares-tomate-anc',
+    name: 'Auriculares Tomate Vincha ANC T-Y2447BT',
+    price: null,
+    category: 'audio',
+    image: '/products/auriculares-tomate-anc.jpg',
+  },
+  {
+    id: 'auriculares-tomate-negro',
+    name: 'Auriculares Inalámbricos Tomate T-G3820BT',
+    price: 35000,
+    category: 'audio',
+    image: '/products/auriculares-tomate-negro.jpg',
+  },
+  {
+    id: 'auriculares-vincha-tomate',
+    name: 'Auriculares Vincha Tomate T-Y2420BT',
+    price: 35000,
+    category: 'audio',
+    image: '/products/auriculares-vincha-tomate.jpg',
+    featured: true,
+  },
+  {
+    id: 'auriculares-tomate-linterna',
+    name: 'Auriculares Inalámbricos Tomate con Linterna',
+    price: null,
+    category: 'audio',
+    image: '/products/auriculares-tomate-linterna.jpg',
+  },
+  {
+    id: 'auriculares-it-blue',
+    name: 'Auriculares Inalámbricos IT-Blue',
+    price: 30000,
+    category: 'audio',
+    image: '/products/auriculares-it-blue.jpg',
+  },
+  {
+    id: 'auriculares-deportivos-it-blue',
+    name: 'Auriculares Inalámbricos Deportivos IT-Blue',
+    price: 40000,
+    category: 'audio',
+    image: '/products/auriculares-deportivos-it-blue.jpg',
+  },
+  {
+    id: 'auriculares-gamer',
+    name: 'Auriculares Profesionales para Juegos',
+    price: 45000,
+    category: 'audio',
+    image: '/products/auriculares-gamer.jpg',
+  },
+  {
+    id: 'auriculares-cat-infantil',
+    name: 'Auriculares Inalámbricos Cat Infantil',
+    price: 30000,
+    category: 'audio',
+    image: '/products/auriculares-cat-infantil.jpg',
+  },
+  {
+    id: 'auriculares-cable-tipo-c',
+    name: 'Auriculares con Cable Entrada Universal y Tipo C',
+    price: 5000,
+    category: 'audio',
+    image: '/products/auriculares-cable-tipo-c.jpg',
+  },
+  {
+    id: 'parlante-tomate-extra-bass',
+    name: 'Parlante Tomate Extra Bass TO-122BT Max',
+    price: 45000,
+    category: 'audio',
+    image: '/products/parlante-tomate-extra-bass.jpg',
+    featured: true,
+  },
+  {
+    id: 'parlante-magnetic',
+    name: 'Parlante Magnetic para Celular',
+    price: null,
+    category: 'audio',
+    image: '/products/parlante-magnetic.jpg',
+  },
+  {
+    id: 'parlante-knup-mini',
+    name: 'Parlante Knup Mini Portable',
+    price: null,
+    category: 'audio',
+    image: '/products/parlante-knup-mini.jpg',
+  },
+  {
+    id: 'microfono-tomate-mic813',
+    name: 'Micrófono Lavalier Inalámbrico Tomate MIC813',
+    price: 40000,
+    category: 'audio',
+    image: '/products/microfono-tomate-mic813.jpg',
+  },
+  {
+    id: 'microfono-tomate-mic844',
+    name: 'Micrófono Lavalier Inalámbrico Tomate MIC844',
+    price: 40000,
+    category: 'audio',
+    image: '/products/microfono-tomate-mic844.jpg',
+  },
+  {
+    id: 'microfono-inalambrico-f15',
+    name: 'Micrófono Inalámbrico Doble F15-2',
+    price: 30000,
+    category: 'audio',
+    image: '/products/microfono-inalambrico-f15.jpg',
+  },
+
+  // ── Cables y Cargadores ────────────────────────────────────────────────
+  {
+    id: 'powerbank-yesido-30000',
+    name: 'Power Bank Yesido 30.000 mAh',
+    price: 30000,
+    category: 'cables',
+    image: '/products/powerbank-yesido-30000.jpg',
+  },
+  {
+    id: 'powerbank-yesido-22w',
+    name: 'Power Bank Yesido 30.000 mAh Carga Rápida 22.5W',
+    price: 30000,
+    category: 'cables',
+    image: '/products/powerbank-yesido-22w.jpg',
+    featured: true,
+  },
+  {
+    id: 'powerbank-15000',
+    name: 'Power Bank 15.000 mAh',
+    price: 20000,
+    category: 'cables',
+    image: '/products/powerbank-15000.jpg',
+  },
+  {
+    id: 'cable-red-5m',
+    name: 'Cable de Red de 5 m',
+    price: 2000,
+    category: 'cables',
+    image: '/products/cable-red-5m.jpg',
+  },
+
+  // ── Seguridad ──────────────────────────────────────────────────────────
+  {
+    id: 'reflector-solar-camara',
+    name: 'Reflector Solar con Cámara',
+    price: 250000,
+    category: 'seguridad',
+    image: '/products/reflector-solar-camara.jpg',
+    featured: true,
+  },
+
+  // ── Iluminación ────────────────────────────────────────────────────────
+  {
+    id: 'reflector-solar',
+    name: 'Reflector Solar Tomate TO-L019',
+    price: 18000,
+    category: 'iluminacion',
+    image: '/products/reflector-solar.jpg',
+  },
+  {
+    id: 'lampara-solar-jardin',
+    name: 'Lámpara Solar de Jardín Knup',
+    price: null,
+    category: 'iluminacion',
+    image: '/products/lampara-solar-jardin.jpg',
+  },
+  {
+    id: 'luces-emergencia-30-led',
+    name: 'Luces de Emergencia 30 LED',
+    price: 10000,
+    category: 'iluminacion',
+    image: '/products/luces-emergencia-30-led.jpg',
+  },
+
+  // ── Gadgets ────────────────────────────────────────────────────────────
+  {
+    id: 'combo-gamer',
+    name: 'Combo Gamer Noga 4 en 1',
+    price: 60000,
+    category: 'gadgets',
+    image: '/products/combo-gamer.jpg',
+    featured: true,
+  },
+  {
+    id: 'camara-deportiva-4k',
+    name: 'Cámara Deportiva 4K',
+    price: 150000,
+    category: 'gadgets',
+    image: '/products/camara-deportiva-4k.jpg',
+    featured: true,
+  },
+  {
+    id: 'drone-lelong',
+    name: 'Drone Lelong',
+    price: 60000,
+    category: 'gadgets',
+    image: '/products/drone-lelong.jpg',
+    featured: true,
+  },
+  {
+    id: 'binocular-20x50',
+    name: 'Binocular 20x50',
+    price: 65000,
+    category: 'gadgets',
+    image: '/products/binocular-20x50.jpg',
+  },
+  {
+    id: 'binocular-30x60',
+    name: 'Binocular 30x60',
+    price: 40000,
+    category: 'gadgets',
+    image: '/products/binocular-30x60.jpg',
+  },
+  {
+    id: 'reloj-it-blue-11-mallas',
+    name: 'Reloj Digital IT-Blue 11 Mallas en Uno',
+    price: 45000,
+    category: 'gadgets',
+    image: '/products/reloj-it-blue-11-mallas.jpg',
+  },
+  {
+    id: 'set-reloj-auriculares-cables',
+    name: 'Set Reloj Digital + Auriculares + Multicables',
+    price: 45000,
+    category: 'gadgets',
+    image: '/products/set-reloj-auriculares-cables.jpg',
+  },
+  {
+    id: 'set-reloj-auriculares-funda',
+    name: 'Set Reloj Digital + Auriculares + Funda + Llavero',
+    price: 45000,
+    category: 'gadgets',
+    image: '/products/set-reloj-auriculares-funda.jpg',
+  },
+  {
+    id: 'set-reloj-auriculares-manicura',
+    name: 'Set Reloj Digital + Auriculares + Set Manicura',
+    price: 40000,
+    category: 'gadgets',
+    image: '/products/set-reloj-auriculares-manicura.jpg',
+  },
+  {
+    id: 'corta-pelo-mascotas',
+    name: 'Máquina Corta Pelo para Mascotas Tomate',
+    price: null,
+    category: 'gadgets',
+    image: '/products/corta-pelo-mascotas.jpg',
+  },
+
+  // ── Herramientas ───────────────────────────────────────────────────────
+  {
+    id: 'set-herramientas-bateria',
+    name: 'Set de Herramientas 3 en 1 Bomtex + 2 Baterías 21V',
+    price: 250000,
+    category: 'herramientas',
+    image: '/products/set-herramientas-bateria.jpg',
+    featured: true,
+    offer: true,
+  },
+
+  // ── Bazar y Cocina ─────────────────────────────────────────────────────
+  {
+    id: 'waflera-3-en-1',
+    name: 'Máquina 3 en 1: Waflera + Sandwichera + Grill',
+    price: 60000,
+    category: 'bazar',
+    image: '/products/waflera-3-en-1.jpg',
+    featured: true,
+  },
+  {
+    id: 'maquina-pastas',
+    name: 'Máquina para Pastas',
+    price: 50000,
+    category: 'bazar',
+    image: '/products/maquina-pastas.jpg',
+  },
+  {
+    id: 'exprimidor-electrico',
+    name: 'Exprimidor de Jugos Eléctrico',
+    price: 60000,
+    category: 'bazar',
+    image: '/products/exprimidor-electrico.jpg',
+  },
+  {
+    id: 'sarten-grill-3-en-1',
+    name: 'Sartén Grill 3 en 1',
+    price: 18000,
+    category: 'bazar',
+    image: '/products/sarten-grill-3-en-1.jpg',
+  },
+  {
+    id: 'utensilios-silicona',
+    name: 'Juego de Utensilios de Cocina de Silicona',
+    price: 18000,
+    category: 'bazar',
+    image: '/products/utensilios-silicona.jpg',
+  },
+  {
+    id: 'picador-verduras',
+    name: 'Picador de Verduras',
+    price: null,
+    category: 'bazar',
+    image: '/products/picador-verduras.jpg',
+  },
+
+  // ── Hogar ──────────────────────────────────────────────────────────────
+  {
+    id: 'tender-4-niveles',
+    name: 'Tender 4 Niveles con Ruedas',
+    price: 40000,
+    category: 'hogar',
+    image: '/products/tender-4-niveles.jpg',
+  },
+  {
+    id: 'plancha-ropa',
+    name: 'Plancha de Ropa',
+    price: 35000,
+    category: 'hogar',
+    image: '/products/plancha-ropa.jpg',
+  },
+  {
+    id: 'cesto-basura-inox',
+    name: 'Cesto de Basura de Acero Inoxidable',
+    price: 25000,
+    category: 'hogar',
+    image: '/products/cesto-basura-inox.jpg',
+  },
+  {
+    id: 'zapatero-4-niveles',
+    name: 'Zapatero 4 Niveles',
+    price: 10000,
+    category: 'hogar',
+    image: '/products/zapatero-4-niveles.jpg',
+  },
+  {
+    id: 'joyero-corazon',
+    name: 'Joyero Forma de Corazón',
+    price: 10000,
+    category: 'hogar',
+    image: '/products/joyero-corazon.jpg',
+  },
+  {
+    id: 'inflador-globos',
+    name: 'Inflador de Globos Eléctrico',
+    price: 30000,
+    category: 'hogar',
+    image: '/products/inflador-globos.jpg',
+  },
+
+  // ── Juguetería ─────────────────────────────────────────────────────────
+  {
+    id: 'elefante-2-en-1',
+    name: 'Elefante 2 en 1 con Luz y Sonido',
+    price: 55000,
+    category: 'juguetes',
+    image: '/products/elefante-2-en-1.jpg',
+    featured: true,
+  },
+  {
+    id: 'sillas-infantiles',
+    name: 'Sillas Infantiles',
+    price: 25000,
+    category: 'juguetes',
+    image: '/products/sillas-infantiles.jpg',
+  },
+  {
+    id: 'autito-didactico',
+    name: 'Juego Didáctico Autito con Piezas Encastrables',
+    price: 25000,
+    category: 'juguetes',
+    image: '/products/autito-didactico.jpg',
+  },
+  {
+    id: 'piezas-encastrables-pizarra',
+    name: 'Piezas Encastrables + Pizarra',
+    price: 8000,
+    category: 'juguetes',
+    image: '/products/piezas-encastrables-pizarra.jpg',
+  },
+  {
+    id: 'juego-ajedrez',
+    name: 'Juego de Ajedrez',
+    price: 18000,
+    category: 'juguetes',
+    image: '/products/juego-ajedrez.jpg',
+  },
+  {
+    id: 'juego-tetris',
+    name: 'Juego Tetris',
+    price: 6000,
+    category: 'juguetes',
+    image: '/products/juego-tetris.jpg',
+  },
+
+  // ── Salud y Cuidado Personal ───────────────────────────────────────────
+  {
+    id: 'audifono-tomate',
+    name: 'Audífono Tomate TO-ZT2422',
+    price: 60000,
+    category: 'salud',
+    image: '/products/audifono-tomate.jpg',
+  },
+  {
+    id: 'pulidor-unas',
+    name: 'Pulidor de Uñas',
+    price: 35000,
+    category: 'salud',
+    image: '/products/pulidor-unas.jpg',
+  },
+  {
+    id: 'kit-primeros-auxilios',
+    name: 'Kit de Primeros Auxilios para Ciclistas',
+    price: 10000,
+    category: 'salud',
+    image: '/products/kit-primeros-auxilios.jpg',
+  },
+  {
+    id: 'faja-ajustable',
+    name: 'Faja Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/faja-ajustable.jpg',
+  },
+  {
+    id: 'rodillera-ajustable',
+    name: 'Rodillera Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/rodillera-ajustable.jpg',
+  },
+  {
+    id: 'codera-ajustable',
+    name: 'Codera Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/codera-ajustable.jpg',
+  },
+  {
+    id: 'hombrera-ajustable',
+    name: 'Hombrera Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/hombrera-ajustable.jpg',
+  },
+  {
+    id: 'munequera-ajustable',
+    name: 'Muñequera Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/munequera-ajustable.jpg',
   },
 ]
 

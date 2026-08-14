@@ -4,8 +4,8 @@ import { Reveal } from '@/components/reveal'
 const benefits = [
   {
     icon: BadgeCheck,
-    title: 'Productos seleccionados',
-    description: 'Elegimos lo mejor en calidad y variedad para vos.',
+    title: 'Local en Tafí del Valle',
+    description: 'Podés pasar a ver los productos y retirar tu pedido.',
   },
   {
     icon: Headset,
@@ -14,8 +14,9 @@ const benefits = [
   },
   {
     icon: Truck,
-    title: 'Envíos a todo el país',
-    description: 'Recibí tus productos donde estés, esté donde estés.',
+    title: 'Envíos en toda la provincia',
+    description:
+      'Llegamos a San Miguel de Tucumán, Yerba Buena, El Mollar y todo Tucumán.',
   },
   {
     icon: ShieldCheck,

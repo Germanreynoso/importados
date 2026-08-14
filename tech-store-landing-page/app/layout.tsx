@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
+import { site } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({
@@ -15,52 +16,68 @@ const manrope = Manrope({
   display: 'swap',
 })
 
-// En Netlify, `URL` es la URL del sitio en tiempo de build. Necesario para que
-// la og:image se resuelva absoluta (previsualización al compartir por WhatsApp).
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.URL ?? 'http://localhost:3000'
+// El título lidera con la marca y cierra con la localidad: es lo que se busca
+// en un pueblo ("importados tafí del valle") y lo que se lee en el resultado.
+const TITLE = 'Importados Tafí | Tecnología y accesorios en Tafí del Valle, Tucumán'
+const SHORT_DESCRIPTION =
+  'Local de tecnología y accesorios importados en Tafí del Valle. Envíos a toda la provincia de Tucumán. Consultá por WhatsApp.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: 'Importados Tafí | Tecnología que te conecta',
-  description:
-    'Accesorios, gadgets y productos tecnológicos importados al mejor precio. Cámaras, aros de luz, auriculares, cargadores y más. Consultá y comprá por WhatsApp con envíos a todo el país.',
-  applicationName: 'Importados Tafí',
+  metadataBase: new URL(site.url),
+  title: {
+    default: TITLE,
+    template: `%s | ${site.name}`,
+  },
+  description: site.description,
+  applicationName: site.name,
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
-    'importados',
-    'Tafí',
-    'tecnología',
-    'accesorios',
-    'gadgets',
-    'cámaras WiFi',
-    'aro de luz',
-    'auriculares',
-    'cargadores',
-    'WhatsApp',
-    'Argentina',
+    'importados Tafí del Valle',
+    'tecnología Tafí del Valle',
+    'accesorios celular Tucumán',
+    'cámaras de seguridad Tucumán',
+    'cargadores Apple Tucumán',
+    'aro de luz Tucumán',
+    'auriculares Tomate',
+    'parlantes Tomate',
+    'linternas Lelong',
+    'Tafí del Valle',
+    'Tucumán',
   ],
+  category: 'shopping',
   generator: 'v0.app',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Importados Tafí | Tecnología que te conecta',
-    description:
-      'Accesorios y gadgets tecnológicos importados al mejor precio. Consultá por WhatsApp.',
-    siteName: 'Importados Tafí',
+    title: TITLE,
+    description: SHORT_DESCRIPTION,
+    siteName: site.name,
     type: 'website',
     locale: 'es_AR',
+    url: '/',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Importados Tafí',
+        alt: site.name,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Importados Tafí | Tecnología que te conecta',
-    description:
-      'Accesorios y gadgets tecnológicos importados al mejor precio. Consultá por WhatsApp.',
+    title: TITLE,
+    description: SHORT_DESCRIPTION,
     images: ['/og-image.png'],
   },
 }

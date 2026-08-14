@@ -1,28 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import { faqs } from '@/lib/faqs'
 import { cn } from '@/lib/utils'
-
-const faqs = [
-  {
-    q: '¿Realizan envíos?',
-    a: 'Sí, hacemos envíos a todo el país. Coordinamos el método de envío por WhatsApp según tu localidad para que recibas tu pedido de la forma más rápida y económica.',
-  },
-  {
-    q: '¿Cómo se realizan los pagos?',
-    a: 'Aceptamos múltiples métodos de pago confiables. Al escribirnos por WhatsApp te pasamos todas las opciones disponibles y coordinamos la que más te convenga.',
-  },
-  {
-    q: '¿Cuánto demora la entrega?',
-    a: 'Los tiempos varían según tu ubicación y el método de envío elegido. Generalmente entre 24 y 72 hs hábiles. Te confirmamos el plazo exacto al momento de la compra.',
-  },
-  {
-    q: '¿Los productos tienen garantía?',
-    a: 'Sí, todos nuestros productos cuentan con garantía. Ante cualquier inconveniente, escribinos por WhatsApp y te ayudamos a resolverlo lo antes posible.',
-  },
-]
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0)
@@ -54,6 +36,7 @@ export function Faq() {
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 aria-expanded={isOpen}
+                aria-controls={`faq-respuesta-${i}`}
               >
                 <span className="font-semibold">{item.q}</span>
                 <ChevronDown
@@ -63,20 +46,19 @@ export function Faq() {
                   )}
                 />
               </button>
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  >
-                    <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">
-                      {item.a}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* La respuesta queda siempre en el HTML, aunque el ítem esté
+                  cerrado: es contenido que buscadores y asistentes de IA leen. */}
+              <motion.div
+                id={`faq-respuesta-${i}`}
+                initial={false}
+                animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                className="overflow-hidden"
+              >
+                <p className="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  {item.a}
+                </p>
+              </motion.div>
             </div>
           )
         })}

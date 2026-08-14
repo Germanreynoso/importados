@@ -45,10 +45,10 @@ export function SiteHeader() {
           <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1.5">
-                <Truck className="size-3.5 text-primary" /> Envíos a todo el país
+                <Truck className="size-3.5 text-primary" /> Envíos a toda la provincia de Tucumán
               </span>
               <span className="hidden items-center gap-1.5 sm:flex">
-                <BadgeCheck className="size-3.5 text-primary" /> Productos de calidad
+                <BadgeCheck className="size-3.5 text-primary" /> Local en Tafí del Valle
               </span>
             </div>
             <div className="flex items-center gap-3">
