@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { BadgeCheck, Menu, Truck, X } from 'lucide-react'
+import { BadgeCheck, Menu, ShoppingBag, Truck, X } from 'lucide-react'
+import { useCart } from '@/lib/cart'
 import {
   FacebookIcon,
   InstagramIcon,
@@ -23,6 +24,7 @@ const navItems = [
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { count, openCart } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -92,6 +94,23 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label={
+              count > 0
+                ? `Abrir carrito, ${count} ${count === 1 ? 'producto' : 'productos'}`
+                : 'Abrir carrito'
+            }
+            className="relative inline-flex size-10 items-center justify-center rounded-lg text-foreground transition-colors hover:text-primary"
+          >
+            <ShoppingBag className="size-6" />
+            {count > 0 && (
+              <span className="absolute right-0.5 top-0.5 flex min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[11px] font-bold leading-5 text-primary-foreground">
+                {count > 99 ? '99+' : count}
+              </span>
+            )}
+          </button>
           <a
             href={whatsappLink('Hola! Quería hacer una consulta sobre sus productos.')}
             target="_blank"

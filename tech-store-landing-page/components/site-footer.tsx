@@ -92,7 +92,7 @@ export function SiteFooter() {
                 className="flex items-center gap-2.5 text-sm text-foreground/60 transition-colors hover:text-primary"
               >
                 <WhatsAppIcon className="size-4 text-primary" />
-                +54 9 381 123 4567
+                +54 9 381 358 6755
               </a>
             </li>
             <li className="flex items-center gap-2.5 text-sm text-foreground/60">

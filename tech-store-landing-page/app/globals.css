@@ -131,4 +131,14 @@
   .shadow-glow-sm {
     box-shadow: 0 10px 26px -12px rgb(227 6 19 / 0.6);
   }
+
+  /* Ocultar scrollbar nativo en carruseles horizontales */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
+

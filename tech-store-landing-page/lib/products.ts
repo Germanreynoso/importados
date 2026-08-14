@@ -1,5 +1,5 @@
 // Número de WhatsApp de la tienda (formato internacional sin + ni espacios)
-export const WHATSAPP_NUMBER = '5493811234567'
+export const WHATSAPP_NUMBER = '5493813586755'
 
 export function whatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`

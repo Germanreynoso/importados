@@ -1,6 +1,10 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { Package } from 'lucide-react'
+import { Check, Package, Plus } from 'lucide-react'
 import { WhatsAppIcon } from '@/components/icons'
+import { useCart } from '@/lib/cart'
 import {
   formatPrice,
   productWhatsappLink,
@@ -8,6 +12,21 @@ import {
 } from '@/lib/products'
 
 export function ProductCard({ product }: { product: Product }) {
+  const { add } = useCart()
+  const [justAdded, setJustAdded] = useState(false)
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => () => {
+    if (timeout.current) clearTimeout(timeout.current)
+  }, [])
+
+  function handleAdd() {
+    add(product)
+    setJustAdded(true)
+    if (timeout.current) clearTimeout(timeout.current)
+    timeout.current = setTimeout(() => setJustAdded(false), 1400)
+  }
+
   return (
     <article className="group hover:shadow-glow flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/60">
       {/* Las fotos vienen con fondo blanco: van sobre un panel claro para que
@@ -40,15 +59,36 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="mt-1 font-display text-lg font-extrabold text-primary">
           {formatPrice(product.price)}
         </p>
-        <a
-          href={productWhatsappLink(product.name)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
-        >
-          <WhatsAppIcon className="size-4" />
-          Consultar por WhatsApp
-        </a>
+
+        <div className="mt-4 flex items-center gap-2">
+          <button
+            type="button"
+            onClick={handleAdd}
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+          >
+            {justAdded ? (
+              <>
+                <Check className="size-4" />
+                Agregado
+              </>
+            ) : (
+              <>
+                <Plus className="size-4" />
+                Agregar
+              </>
+            )}
+          </button>
+          <a
+            href={productWhatsappLink(product.name)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Consultar por ${product.name} por WhatsApp`}
+            title="Consultar solo este producto"
+            className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-border text-foreground/70 transition-colors hover:border-primary hover:text-primary"
+          >
+            <WhatsAppIcon className="size-4" />
+          </a>
+        </div>
       </div>
     </article>
   )
