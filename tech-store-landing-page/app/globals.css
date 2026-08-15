@@ -104,6 +104,15 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Salto suave al usar los accesos por categoría y el menú del header. */
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 @layer utilities {
