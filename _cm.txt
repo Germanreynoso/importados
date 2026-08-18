@@ -1,0 +1,19 @@
+feat: dirección del local y noindex hasta tener dominio propio
+
+Dirección
+- Calle Don Goyo, Tafí del Valle, tomada del pin de Google Maps que pasó el
+  cliente. Falta la altura: el pin cae sobre la calle, sin número
+- Coordenadas exactas en el schema (GeoCoordinates) y hasMap al link de
+  Maps, que es lo que Google usa para ubicar el local
+- La dirección del footer ahora abre Maps
+
+Indexación
+- El sitio queda fuera de Google mientras corra en la URL .vercel.app: si se
+  indexa la provisoria, después compite con el dominio real y sacarla lleva
+  semanas. Afecta robots.txt y el meta robots
+- Se activa solo al definir NEXT_PUBLIC_SITE_URL en Vercel, sin tocar código
+
+Verificado con build en los dos estados: sin la variable, robots.txt es
+Disallow / y el meta dice noindex; con la variable, Allow / e index, follow.
+
+Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>

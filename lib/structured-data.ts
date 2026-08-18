@@ -43,6 +43,12 @@ function storeSchema() {
         addressCountry: site.address.country,
       },
     }),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: site.geo.lat,
+      longitude: site.geo.lng,
+    },
+    hasMap: site.mapsUrl,
     areaServed: site.areaServed.map((name) => ({
       '@type': 'AdministrativeArea',
       name,

@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Manrope } from 'next/font/google'
-import { site } from '@/lib/site'
+import { isIndexable, site } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({
@@ -47,13 +47,14 @@ export const metadata: Metadata = {
     'Tucumán',
   ],
   category: 'shopping',
-  generator: 'v0.app',
+  // Fuera de Google hasta que el sitio corra bajo el dominio propio
+  // (ver isIndexable en lib/site.ts).
   robots: {
-    index: true,
-    follow: true,
+    index: isIndexable,
+    follow: isIndexable,
     googleBot: {
-      index: true,
-      follow: true,
+      index: isIndexable,
+      follow: isIndexable,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },

@@ -103,17 +103,27 @@ export function SiteFooter() {
             {/* Dirección postal: NAP. Debe coincidir con la ficha de Google. */}
             <li className="flex items-start gap-2.5 text-sm text-foreground/60">
               <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
-              <address className="not-italic">
-                {hasPublicAddress && (
-                  <>
-                    {site.address.street}
-                    <br />
-                  </>
-                )}
-                {site.address.locality}, {site.address.region}
-                <br />
-                Argentina
-              </address>
+              <a
+                href={site.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-primary"
+              >
+                <address className="not-italic">
+                  {hasPublicAddress && (
+                    <>
+                      {site.address.street}
+                      <br />
+                    </>
+                  )}
+                  {site.address.locality}, {site.address.region}
+                  <br />
+                  Argentina
+                </address>
+                <span className="mt-1 inline-block text-xs font-semibold text-primary">
+                  Cómo llegar
+                </span>
+              </a>
             </li>
           </ul>
         </div>

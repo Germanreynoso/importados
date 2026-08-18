@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { site } from '@/lib/site'
+import { isIndexable, site } from '@/lib/site'
 
 /**
  * Los crawlers de IA se permiten explícitamente: queremos que ChatGPT,
@@ -22,6 +22,12 @@ const AI_CRAWLERS = [
 ]
 
 export default function robots(): MetadataRoute.Robots {
+  // Mientras el sitio viva en la URL provisoria de Vercel se bloquea entero.
+  // Se abre solo al definir NEXT_PUBLIC_SITE_URL con el dominio propio.
+  if (!isIndexable) {
+    return { rules: [{ userAgent: '*', disallow: '/' }] }
+  }
+
   return {
     rules: [
       { userAgent: '*', allow: '/' },

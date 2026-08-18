@@ -32,13 +32,20 @@ export const site = {
   phoneE164: '+5493813586755',
 
   address: {
-    /** PENDIENTE: calle y número del local. Sin esto no se publica la dirección. */
-    street: '',
+    /** PENDIENTE: falta la altura. El pin del cliente cae sobre la calle. */
+    street: 'Don Goyo',
     locality: 'Tafí del Valle',
     region: 'Tucumán',
     postalCode: 'T4137',
     country: 'AR',
   },
+
+  /** Coordenadas del local, tomadas del pin que pasó el cliente. Google las
+   *  usa para ubicarlo en el mapa aunque la dirección no tenga altura. */
+  geo: { lat: -26.8525815, lng: -65.7111027 },
+
+  /** Link corto de Google Maps al local, para el botón "Cómo llegar". */
+  mapsUrl: 'https://maps.app.goo.gl/uFHx16z9a39GFvZH8',
 
   /** PENDIENTE: confirmar con el cliente. Formato schema.org. */
   openingHours: [
@@ -68,6 +75,14 @@ export const site = {
 /** No publicamos dirección hasta tenerla real: un dato falso en los datos
  *  estructurados es peor que no tener dato. */
 export const hasPublicAddress = site.address.street.trim().length > 0
+
+/**
+ * Solo se indexa cuando corre bajo el dominio propio. Mientras el sitio vive
+ * en la URL .vercel.app conviene mantenerlo fuera de Google: si se indexa la
+ * provisoria, después compite con el dominio real y sacarla lleva semanas.
+ * Se activa solo al definir NEXT_PUBLIC_SITE_URL en Vercel.
+ */
+export const isIndexable = Boolean(process.env.NEXT_PUBLIC_SITE_URL)
 
 /** Perfiles oficiales para `sameAs`. Solo los que existen. */
 export const socialProfiles = Object.values(site.social).filter(

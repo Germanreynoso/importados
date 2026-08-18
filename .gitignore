@@ -9,3 +9,6 @@ node_modules/
 # Exports de Telegram: conversación privada con el proveedor. Las fotos que se
 # usan ya están en public/products, así que el export no hace falta en el repo.
 ChatExport_*/
+
+.vercel
+.env*
