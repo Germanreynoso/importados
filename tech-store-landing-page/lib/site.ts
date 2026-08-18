@@ -14,10 +14,17 @@ export const site = {
   description:
     'Local de tecnología y accesorios importados en Tafí del Valle, Tucumán. Cargadores Apple, cámaras de seguridad WiFi, aros de luz, auriculares y parlantes Tomate, linternas Lelong y más. Consultá y comprá por WhatsApp con envíos a toda la provincia de Tucumán.',
 
-  /** En Netlify, `URL` es la URL del sitio en tiempo de build. */
+  /**
+   * URL pública. Vercel expone VERCEL_PROJECT_PRODUCTION_URL sin protocolo,
+   * y siempre apunta al dominio de producción (no al de cada preview).
+   * Con el dominio propio conectado conviene fijar NEXT_PUBLIC_SITE_URL,
+   * que gana sobre ella.
+   */
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : undefined) ??
     'http://localhost:3000',
 
   phoneDisplay: '+54 9 381 358 6755',
