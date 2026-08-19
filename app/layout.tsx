@@ -81,6 +81,9 @@ export const metadata: Metadata = {
     description: SHORT_DESCRIPTION,
     images: ['/og-image.png'],
   },
+  verification: {
+    google: '4YLnelWE3v9_WoJmVvUvecqwUbnpKwQIXDfCREuXSdk',
+  },
 }
 
 export const viewport: Viewport = {
