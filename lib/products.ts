@@ -49,6 +49,41 @@ export type Product = {
   offer?: boolean
 }
 
+/**
+ * Bajada corta por categoría para la vista ampliada del producto (modal).
+ * No hay descripción por producto todavía, así que se usa una genérica
+ * por rubro; el nombre completo del producto ya aporta el detalle.
+ */
+export const categoryDescriptions: Record<CategoryId, string> = {
+  cables: 'Cargadores, cables y power banks para no quedarte nunca sin batería.',
+  audio: 'Auriculares y parlantes para tu música y tus llamadas, todo el día.',
+  seguridad: 'Cámaras y accesorios para cuidar tu casa o tu local.',
+  iluminacion: 'Luces, linternas y reflectores para cada rincón, adentro y afuera.',
+  accesorios: 'Fundas, correas y soportes para cuidar y personalizar tu celular.',
+  soportes: 'Trípodes y soportes para fotos, videos y streaming sin usar las manos.',
+  gadgets: 'Tecnología práctica para el día a día.',
+  herramientas: 'Herramientas eléctricas para el hogar y el taller.',
+  bazar: 'Electrodomésticos y utensilios para hacer más fácil la cocina.',
+  hogar: 'Artículos prácticos para organizar y equipar tu casa.',
+  juguetes: 'Juguetes didácticos y entretenidos para los más chicos.',
+  salud: 'Cuidado personal y accesorios para entrenar y sentirte mejor.',
+}
+
+export const categoryLabels: Record<CategoryId, string> = {
+  cables: 'Cables y Cargadores',
+  audio: 'Audio',
+  seguridad: 'Seguridad',
+  iluminacion: 'Iluminación',
+  accesorios: 'Accesorios para Celular',
+  soportes: 'Trípodes y Soportes',
+  gadgets: 'Gadgets',
+  herramientas: 'Herramientas',
+  bazar: 'Bazar y Cocina',
+  hogar: 'Hogar',
+  juguetes: 'Juguetería',
+  salud: 'Salud y Cuidado Personal',
+}
+
 export const products: Product[] = [
   // ── Cables y Cargadores ────────────────────────────────────────────────
   {

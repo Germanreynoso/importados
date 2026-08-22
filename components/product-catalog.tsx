@@ -19,26 +19,32 @@ import {
 } from 'lucide-react'
 import { ProductCard } from '@/components/product-card'
 import { Reveal } from '@/components/reveal'
-import { products, type CategoryId } from '@/lib/products'
+import { categoryLabels, products, type CategoryId } from '@/lib/products'
+
+const categoryIcons: Record<CategoryId, typeof Cable> = {
+  cables: Cable,
+  audio: Headphones,
+  seguridad: Camera,
+  iluminacion: Lightbulb,
+  accesorios: Smartphone,
+  soportes: TabletSmartphone,
+  gadgets: Cpu,
+  herramientas: Wrench,
+  bazar: ChefHat,
+  hogar: House,
+  juguetes: Baby,
+  salud: HeartPulse,
+}
 
 const categoryMeta: {
   id: CategoryId
   label: string
   icon: typeof Cable
-}[] = [
-  { id: 'cables', label: 'Cables y Cargadores', icon: Cable },
-  { id: 'audio', label: 'Audio', icon: Headphones },
-  { id: 'seguridad', label: 'Seguridad', icon: Camera },
-  { id: 'iluminacion', label: 'Iluminación', icon: Lightbulb },
-  { id: 'accesorios', label: 'Accesorios para Celular', icon: Smartphone },
-  { id: 'soportes', label: 'Trípodes y Soportes', icon: TabletSmartphone },
-  { id: 'gadgets', label: 'Gadgets', icon: Cpu },
-  { id: 'herramientas', label: 'Herramientas', icon: Wrench },
-  { id: 'bazar', label: 'Bazar y Cocina', icon: ChefHat },
-  { id: 'hogar', label: 'Hogar', icon: House },
-  { id: 'juguetes', label: 'Juguetería', icon: Baby },
-  { id: 'salud', label: 'Salud y Cuidado Personal', icon: HeartPulse },
-]
+}[] = (Object.keys(categoryLabels) as CategoryId[]).map((id) => ({
+  id,
+  label: categoryLabels[id],
+  icon: categoryIcons[id],
+}))
 
 const grouped = categoryMeta.map((cat) => ({
   ...cat,
