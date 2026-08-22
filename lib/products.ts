@@ -888,13 +888,6 @@ export const products: Product[] = [
     category: 'salud',
     image: '/products/codera-ajustable.jpg',
   },
-  {
-    id: 'munequera-ajustable',
-    name: 'Muñequera Ajustable',
-    price: null,
-    category: 'salud',
-    image: '/products/munequera-ajustable.jpg',
-  },
 
   // ══ Incorporación 21 de agosto 2026 ════════════════════════════════════
 
@@ -904,6 +897,7 @@ export const products: Product[] = [
     name: 'Samsung A06 64 GB',
     price: 300000,
     category: 'gadgets',
+    image: '/products/samsung-a06-64gb.jpg',
     featured: true,
   },
   {
@@ -911,6 +905,7 @@ export const products: Product[] = [
     name: 'Redmi 15C 128 GB 4 RAM',
     price: 380000,
     category: 'gadgets',
+    image: '/products/redmi-15c-128gb.jpg',
     featured: true,
   },
   {
@@ -918,6 +913,7 @@ export const products: Product[] = [
     name: 'Moto G5 128 GB',
     price: 350000,
     category: 'gadgets',
+    image: '/products/moto-g5-128gb.jpg',
     featured: true,
   },
   {
@@ -925,6 +921,7 @@ export const products: Product[] = [
     name: 'iPhone 16 128 GB',
     price: null,
     category: 'gadgets',
+    image: '/products/iphone-16-128gb.jpg',
     featured: true,
   },
 
@@ -934,66 +931,95 @@ export const products: Product[] = [
     name: 'Wallet',
     price: 15000,
     category: 'accesorios',
+    image: '/products/wallet-accesorio.jpg',
+  },
+  {
+    id: 'airpods',
+    name: 'AirPods',
+    price: 35000,
+    category: 'accesorios',
+    image: '/products/airpods.jpg',
+    featured: true,
+  },
+  {
+    id: 'cargador-magsafe',
+    name: 'Cargador MagSafe',
+    price: 30000,
+    category: 'accesorios',
+    image: '/products/cargador-magsafe.jpg',
+    featured: true,
   },
   {
     id: 'correa-cordon-universal',
     name: 'Correa Cordón Universal',
     price: 10000,
     category: 'accesorios',
+    image: '/products/correa-cordon-universal.jpg',
   },
   {
     id: 'correa-brillante',
     name: 'Correa Brillante',
     price: 10000,
     category: 'accesorios',
+    image: '/products/correa-brillante.jpg',
   },
   {
     id: 'funda-cargador-20w-animada',
     name: 'Funda de Cargador 20W Animada',
     price: 10000,
     category: 'accesorios',
+    image: '/products/funda-cargador-20w-animada.jpg',
   },
   {
     id: 'protector-pin-carga-polvo',
     name: 'Protector Pin de Carga Anti Polvo',
     price: 8000,
     category: 'accesorios',
+    image: '/products/protector-pin-carga-polvo.jpg',
+    gallery: ['/products/protector-pin-carga-polvo-2.jpg'],
   },
   {
     id: 'correas-perladas-cortas',
     name: 'Correas Cortas Perladas',
     price: 8000,
     category: 'accesorios',
+    image: '/products/correas-perladas-cortas.jpg',
   },
   {
     id: 'aro-ring-soporte-celular',
     name: 'Aro Soporte Ring Celular',
     price: 5000,
     category: 'accesorios',
+    image: '/products/aro-ring-soporte-celular.jpg',
   },
   {
     id: 'correas-estampadas-celular',
     name: 'Correas Estampadas para Celular',
     price: 10000,
     category: 'accesorios',
+    image: '/products/correas-estampadas-celular.jpg',
   },
   {
     id: 'aro-magnetic-soporte-celular',
     name: 'Aro Magnetic Soporte Celular',
     price: 8000,
     category: 'accesorios',
+    image: '/products/aro-magnetic-soporte-celular.jpg',
   },
   {
     id: 'accesorios-fundas',
     name: 'Accesorios para Fundas',
     price: 8000,
     category: 'accesorios',
+    image: '/products/accesorios-fundas.jpg',
+    gallery: ['/products/accesorios-fundas-2.jpg'],
   },
   {
     id: 'funda-cargador-aesthetic',
     name: 'Funda para Cargador Aesthetic',
     price: 10000,
     category: 'accesorios',
+    image: '/products/funda-cargador-aesthetic.jpg',
   },
 
   // ── Audio ──────────────────────────────────────────────────────────────
@@ -1002,18 +1028,28 @@ export const products: Product[] = [
     name: 'EarPods',
     price: 15000,
     category: 'audio',
+    image: '/products/earbuds-tomate.jpg',
   },
   {
     id: 'parlante-moto-bici',
     name: 'Parlante para Moto Bici',
     price: 20000,
     category: 'audio',
+    image: '/products/parlante-moto-bici.jpg',
+  },
+  {
+    id: 'parlante-con-sujetador',
+    name: 'Parlante con Sujetador',
+    price: 40000,
+    category: 'audio',
+    image: '/products/parlante-con-sujetador.jpg',
   },
   {
     id: 'soporte-magnetico-parlante',
     name: 'Soporte Magnético para Parlante',
     price: 15000,
     category: 'audio',
+    image: '/products/soporte-magnetico-parlante.jpg',
   },
 
   // ── Cables y Cargadores ────────────────────────────────────────────────
@@ -1022,12 +1058,14 @@ export const products: Product[] = [
     name: 'Cable Tipo C a Tipo C',
     price: 8000,
     category: 'cables',
+    image: '/products/cable-tipo-c-a-c.jpg',
   },
   {
     id: 'fuente-carga-multiple',
     name: 'Fuente de Carga Múltiple',
     price: 28000,
     category: 'cables',
+    image: '/products/fuente-carga-multiple.jpg',
   },
 
   // ── Seguridad ──────────────────────────────────────────────────────────
@@ -1036,26 +1074,37 @@ export const products: Product[] = [
     name: 'Candado Digital',
     price: 35000,
     category: 'seguridad',
+    image: '/products/candado-digital.jpg',
   },
 
   // ── Iluminación ────────────────────────────────────────────────────────
+  {
+    id: 'luces-led-fiesta',
+    name: 'Luces 14 LED de Fiesta',
+    price: null,
+    category: 'iluminacion',
+    image: '/products/luces-led-fiesta.jpg',
+  },
   {
     id: 'luz-rgb-led',
     name: 'Luz RGB',
     price: 40000,
     category: 'iluminacion',
+    image: '/products/luz-rgb-led.jpg',
   },
   {
     id: 'luz-led-con-tripode',
     name: 'Luz LED con Trípode',
     price: 45000,
     category: 'iluminacion',
+    image: '/products/luz-led-con-tripode.jpg',
   },
   {
     id: 'luz-magnetica',
     name: 'Luz Magnética',
     price: 45000,
     category: 'iluminacion',
+    image: '/products/luz-magnetica.jpg',
   },
 
   // ── Gadgets ────────────────────────────────────────────────────────────
@@ -1064,18 +1113,30 @@ export const products: Product[] = [
     name: 'Extensor de WiFi 300 MBPS',
     price: 38000,
     category: 'gadgets',
+    image: '/products/extensor-wifi-300mbps.jpg',
   },
   {
     id: 'extensor-wifi-ac-1200',
     name: 'Extensor de WiFi AC 1200',
     price: 65000,
     category: 'gadgets',
+    image: '/products/extensor-wifi-ac-1200.jpg',
   },
   {
     id: 'mini-teclado-plegable',
     name: 'Mini Teclado Plegable',
     price: 20000,
     category: 'gadgets',
+    image: '/products/mini-teclado-plegable.jpg',
+  },
+
+  // ── Juguetería ─────────────────────────────────────────────────────────
+  {
+    id: 'juego-block-puzzle',
+    name: 'Juego Didáctico Block Puzzle',
+    price: null,
+    category: 'juguetes',
+    image: '/products/juego-block-puzzle.jpg',
   },
 
   // ── Hogar ──────────────────────────────────────────────────────────────
@@ -1091,6 +1152,7 @@ export const products: Product[] = [
     name: 'Joyero Irun',
     price: 9000,
     category: 'hogar',
+    image: '/products/joyero-irun.jpg',
   },
 
   // ── Bazar y Cocina ─────────────────────────────────────────────────────
@@ -1099,6 +1161,7 @@ export const products: Product[] = [
     name: 'Pava Eléctrica Acero Inoxidable',
     price: 20000,
     category: 'bazar',
+    image: '/products/pava-electrica-inox.jpg',
   },
 
   // ── Soportes y Trípodes ────────────────────────────────────────────────
@@ -1107,18 +1170,21 @@ export const products: Product[] = [
     name: 'Palo de Selfie',
     price: 10000,
     category: 'soportes',
+    image: '/products/palo-selfie.jpg',
   },
   {
     id: 'selfie-tripode-automatico',
     name: 'Selfie Trípode Automático',
     price: 60000,
     category: 'soportes',
+    image: '/products/selfie-tripode-automatico.jpg',
   },
   {
     id: 'selfie-tripode-magsafe',
     name: 'Selfie Trípode Automático MagSafe',
     price: 80000,
     category: 'soportes',
+    image: '/products/selfie-tripode-magsafe.jpg',
     featured: true,
   },
   {
@@ -1126,13 +1192,24 @@ export const products: Product[] = [
     name: 'Trípode Corto',
     price: 8000,
     category: 'soportes',
+    image: '/products/tripode-corto.jpg',
   },
   {
     id: 'soporte-magnetico',
     name: 'Soporte Magnético',
     price: 10000,
     category: 'soportes',
+    image: '/products/soporte-magnetico.jpg',
   },
+  {
+    id: 'anillo-soporte',
+    name: 'Anillo Soporte',
+    price: 9000,
+    category: 'soportes',
+    image: '/products/anillo-soporte.jpg',
+  },
+
+  // ── Salud y Cuidado Personal ───────────────────────────────────────────
   {
     id: 'hombrera-ajustable',
     name: 'Hombrera Ajustable',
