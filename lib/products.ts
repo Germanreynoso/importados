@@ -889,6 +889,251 @@ export const products: Product[] = [
     image: '/products/codera-ajustable.jpg',
   },
   {
+    id: 'munequera-ajustable',
+    name: 'Muñequera Ajustable',
+    price: null,
+    category: 'salud',
+    image: '/products/munequera-ajustable.jpg',
+  },
+
+  // ══ Incorporación 21 de agosto 2026 ════════════════════════════════════
+
+  // ── Teléfonos ──────────────────────────────────────────────────────────
+  {
+    id: 'samsung-a06-64gb',
+    name: 'Samsung A06 64 GB',
+    price: 300000,
+    category: 'gadgets',
+    featured: true,
+  },
+  {
+    id: 'redmi-15c-128gb',
+    name: 'Redmi 15C 128 GB 4 RAM',
+    price: 380000,
+    category: 'gadgets',
+    featured: true,
+  },
+  {
+    id: 'moto-g5-128gb',
+    name: 'Moto G5 128 GB',
+    price: 350000,
+    category: 'gadgets',
+    featured: true,
+  },
+  {
+    id: 'iphone-16-128gb',
+    name: 'iPhone 16 128 GB',
+    price: null,
+    category: 'gadgets',
+    featured: true,
+  },
+
+  // ── Accesorios para Celular ────────────────────────────────────────────
+  {
+    id: 'wallet-accesorio',
+    name: 'Wallet',
+    price: 15000,
+    category: 'accesorios',
+  },
+  {
+    id: 'correa-cordon-universal',
+    name: 'Correa Cordón Universal',
+    price: 10000,
+    category: 'accesorios',
+  },
+  {
+    id: 'correa-brillante',
+    name: 'Correa Brillante',
+    price: 10000,
+    category: 'accesorios',
+  },
+  {
+    id: 'funda-cargador-20w-animada',
+    name: 'Funda de Cargador 20W Animada',
+    price: 10000,
+    category: 'accesorios',
+  },
+  {
+    id: 'protector-pin-carga-polvo',
+    name: 'Protector Pin de Carga Anti Polvo',
+    price: 8000,
+    category: 'accesorios',
+  },
+  {
+    id: 'correas-perladas-cortas',
+    name: 'Correas Cortas Perladas',
+    price: 8000,
+    category: 'accesorios',
+  },
+  {
+    id: 'aro-ring-soporte-celular',
+    name: 'Aro Soporte Ring Celular',
+    price: 5000,
+    category: 'accesorios',
+  },
+  {
+    id: 'correas-estampadas-celular',
+    name: 'Correas Estampadas para Celular',
+    price: 10000,
+    category: 'accesorios',
+  },
+  {
+    id: 'aro-magnetic-soporte-celular',
+    name: 'Aro Magnetic Soporte Celular',
+    price: 8000,
+    category: 'accesorios',
+  },
+  {
+    id: 'accesorios-fundas',
+    name: 'Accesorios para Fundas',
+    price: 8000,
+    category: 'accesorios',
+  },
+  {
+    id: 'funda-cargador-aesthetic',
+    name: 'Funda para Cargador Aesthetic',
+    price: 10000,
+    category: 'accesorios',
+  },
+
+  // ── Audio ──────────────────────────────────────────────────────────────
+  {
+    id: 'earbuds-tomate',
+    name: 'EarPods',
+    price: 15000,
+    category: 'audio',
+  },
+  {
+    id: 'parlante-moto-bici',
+    name: 'Parlante para Moto Bici',
+    price: 20000,
+    category: 'audio',
+  },
+  {
+    id: 'soporte-magnetico-parlante',
+    name: 'Soporte Magnético para Parlante',
+    price: 15000,
+    category: 'audio',
+  },
+
+  // ── Cables y Cargadores ────────────────────────────────────────────────
+  {
+    id: 'cable-tipo-c-a-c',
+    name: 'Cable Tipo C a Tipo C',
+    price: 8000,
+    category: 'cables',
+  },
+  {
+    id: 'fuente-carga-multiple',
+    name: 'Fuente de Carga Múltiple',
+    price: 28000,
+    category: 'cables',
+  },
+
+  // ── Seguridad ──────────────────────────────────────────────────────────
+  {
+    id: 'candado-digital',
+    name: 'Candado Digital',
+    price: 35000,
+    category: 'seguridad',
+  },
+
+  // ── Iluminación ────────────────────────────────────────────────────────
+  {
+    id: 'luz-rgb-led',
+    name: 'Luz RGB',
+    price: 40000,
+    category: 'iluminacion',
+  },
+  {
+    id: 'luz-led-con-tripode',
+    name: 'Luz LED con Trípode',
+    price: 45000,
+    category: 'iluminacion',
+  },
+  {
+    id: 'luz-magnetica',
+    name: 'Luz Magnética',
+    price: 45000,
+    category: 'iluminacion',
+  },
+
+  // ── Gadgets ────────────────────────────────────────────────────────────
+  {
+    id: 'extensor-wifi-300mbps',
+    name: 'Extensor de WiFi 300 MBPS',
+    price: 38000,
+    category: 'gadgets',
+  },
+  {
+    id: 'extensor-wifi-ac-1200',
+    name: 'Extensor de WiFi AC 1200',
+    price: 65000,
+    category: 'gadgets',
+  },
+  {
+    id: 'mini-teclado-plegable',
+    name: 'Mini Teclado Plegable',
+    price: 20000,
+    category: 'gadgets',
+  },
+
+  // ── Hogar ──────────────────────────────────────────────────────────────
+  {
+    id: 'botellas-3-en-1',
+    name: 'Botellas 3 en 1',
+    price: 12000,
+    category: 'hogar',
+    image: '/products/botellas-3-en-1.jpg',
+  },
+  {
+    id: 'joyero-irun',
+    name: 'Joyero Irun',
+    price: 9000,
+    category: 'hogar',
+  },
+
+  // ── Bazar y Cocina ─────────────────────────────────────────────────────
+  {
+    id: 'pava-electrica-inox',
+    name: 'Pava Eléctrica Acero Inoxidable',
+    price: 20000,
+    category: 'bazar',
+  },
+
+  // ── Soportes y Trípodes ────────────────────────────────────────────────
+  {
+    id: 'palo-selfie',
+    name: 'Palo de Selfie',
+    price: 10000,
+    category: 'soportes',
+  },
+  {
+    id: 'selfie-tripode-automatico',
+    name: 'Selfie Trípode Automático',
+    price: 60000,
+    category: 'soportes',
+  },
+  {
+    id: 'selfie-tripode-magsafe',
+    name: 'Selfie Trípode Automático MagSafe',
+    price: 80000,
+    category: 'soportes',
+    featured: true,
+  },
+  {
+    id: 'tripode-corto',
+    name: 'Trípode Corto',
+    price: 8000,
+    category: 'soportes',
+  },
+  {
+    id: 'soporte-magnetico',
+    name: 'Soporte Magnético',
+    price: 10000,
+    category: 'soportes',
+  },
+  {
     id: 'hombrera-ajustable',
     name: 'Hombrera Ajustable',
     price: null,
